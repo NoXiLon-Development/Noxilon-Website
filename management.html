@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- 
+Copyright (C) [2023] [ccetl] (pseudonym)
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+-->
+<html>
+  <head>
+    <title>NoXiLon</title>
+    <meta charset="utf-8">
+    <link id="stylesheet" type="text/css" href="styles.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/69172708?s=200&v=4">
+
+	  <script>
+      var stylesheet = document.getElementById("stylesheet");
+      var currentStyle = "styles.css";
+      var newStyle = "styles2.css";
+
+      function changeStyle() {
+        if(currentStyle == "styles.css"){
+          stylesheet.href = newStyle;
+          currentStyle = newStyle;
+          newStyle = "styles.css";
+        } else {
+          stylesheet.href = newStyle;
+          currentStyle = newStyle;
+          newStyle = "styles2.css";
+        }
+      }
+    </script>
+
+  </head>
+  <body>
+    <div class="site">
+      <header>
+        <h1>NoXiLon</h1>
+        <button class="dark" id="dark" onclick="changeStyle()">Darkmode</button>
+      </header>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="https://github.com/NoXiLon-Development">Github</a></li>
+          <li><a href="management.html">Management</a></li>
+        </ul>
+      </nav>
+
+      <main>
+        Please loging to continue:
+          <form class="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <br>
+            <input class="submit" type="submit" value="Submit">
+          </form>
+        <script>
+          const form = document.getElementById("form");
+          form.addEventListener("submit", async (event) => {
+            alert("Incorrect username or password");
+            event.preventDefault();
+            const formData = new FormData(form);
+            const username = formData.get("username");
+            const password = formData.get("password");
+          });
+        </script>
+      </main>
+    </div>
+    <footer>
+      <p id="copyright">Copyright © 2023 ccetl (a pseudonym). This software is released under the GNU General Public License V3.0 (<a class="link" href="GNU.html">Details</a>). Note that the name used in the copyright notice is not the legal name of the copyright holder.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- 
+Copyright (C) [2023] [ccetl] (pseudonym)
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+-->
+<html>
+  <head>
+
+    <title>NoXiLon</title>
+    <meta charset="utf-8">
+    <link id="stylesheet" type="text/css" href="styles.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/69172708?s=200&v=4">
+
+	  <script>
+      var isWhitemode = false;
+      var stylesheet = document.getElementById("stylesheet");
+      var darkmode = "styles.css";
+      var whitemode = "styles2.css";
+
+      function changeStyle() {
+        if(isWhitemode == true){
+          stylesheet.href = darkmode;
+          isWhitemode = false;
+          p.innerText = "Whitemode"
+        } else {
+          stylesheet.href = whitemode;
+          isWhitemode = true;
+          p.innerText = "Darkmode"
+        }
+      }
+    </script>
+
+  </head>
+  <body>
+    <div class="site">
+      <header>
+        <h1>NoXiLon</h1>
+        <button class="dark" id="dark" onclick="changeStyle()">
+          Whitemode
+        </button>
+      </header>
+  
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="https://github.com/NoXiLon-Development">Github</a></li>
+          <li><a href="management.html">Management</a></li>
+        </ul>
+      </nav>
+  
+      <main>
+        <h2> GNU General Public License V3.0</h2>
+        <p class="cText"> This website is released under the terms of the GNU General Public License V3.0.</p>
+        <p class="cText"> The software, including all its source code and documentation, is copyrighted </p>
+        <p class="cText"> by ccetl, a pseudonym used by the copyright holder. The legal name of the </p>
+        <p class="cText"> copyright holder is not disclosed. For more information about the author,</p>
+        <p class="cText"> you can visit the website <a class="linkBlue" href="https://github.com/ccetl">github.com/ccetl</a> or reach the author on Discord at ccetl#3198.</p>
+        <p class="cText"> The source is aviable at <a class="linkBlue" href="https://github.com/NoXiLon-Development/Noxilon-Website">github.com/NoXiLon-Development/Noxilon-Website</a>.</p>
+        <p class="cText"> You can view the license <a class="linkBlue" href="https://www.gnu.org/licenses/gpl-3.0.txt">here</a>.</p>
+    </main>
+    </div>
+
+    <footer  class="footer2" style="position: fixed;">
+      <p id="copyright">Copyright © 2023 ccetl (a pseudonym). This software is released under the GNU General Public License V3.0 (<a class="link" href="GNU.html">Details</a>). Note that the name used in the copyright notice is not the legal name of the copyright holder.</p>
+    </footer>
+  </body>
+</html>
