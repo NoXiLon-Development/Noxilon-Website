@@ -21,6 +21,21 @@ body {
   padding: 0;
   background-color: white;
   color: black;
+  overflow-x: hidden;
+  overflow-x: hidden;
+	min-height: 100vh;
+	display:flex;
+  flex-direction:column;
+}
+
+body, html {
+  width: 100%;
+}
+
+.site {
+  position: relative;
+  z-index: 1;
+  overflow-x: hidden;
 }
 
 header {
@@ -77,6 +92,8 @@ main {
   border-radius: 1em;
   box-shadow: 0 0 5px #000000;
   text-align: center;
+  flex: 1;
+	z-index: 1;
 }
 
 section {
@@ -95,7 +112,7 @@ footer {
 }
 
 footer {
-  position: fixed;
+  position: relative;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -271,8 +288,8 @@ iframe {
 	font-size: 15px;
 }
 
-.footer2 footer {
-	position: fixed;
+.footer2 {
+	position: relative;
 	z-index: 2;
 	bottom: unset;
 }
@@ -284,4 +301,46 @@ pre {
 .linkBlue {
 	text-decoration: none;
 	color: rgb(0, 87, 163);
+}
+
+.changelog {
+	border-bottom: solid 4px #5e35b1;
+	border-top: solid 4px #5e35b1;
+	padding: 1em;
+}
+
+#changeloglist {
+	display: inline-block;
+  	text-align: left;
+}
+
+#changelogcontainer {
+	text-align: center;
+}
+
+body::-webkit-scrollbar {
+  width: 7px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #5e35b1;
+border-radius: 10px;
+}
+
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #4a148c;
+}
+
+body scrollbar {
+  width: 8px;
+}
+
+body scrollbar thumb {
+  background-color: #5e35b1;
+  border-radius: 10px;
+}
+
+body scrollbar thumb:hover {
+  background-color: #4a148c;
 }
